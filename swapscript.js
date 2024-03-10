@@ -79,7 +79,7 @@ function findAndReplace() {
 		
 		for(var j=0;j<element.childNodes.length;j++) {
 			if(Date.now() - startTime > 5000) { // If translating takes more than 5 seconds, abort!
-				//console.log("Russian Лексика Tool took more than 5 seconds to alter this page.");
+				console.log("Russian Лексика Tool took more than 5 seconds to alter this page.");
 				return; 
 			}
 			var node = element.childNodes[j];

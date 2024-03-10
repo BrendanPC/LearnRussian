@@ -30,3 +30,5 @@ A simple Chrome extension to help me extend my Russian vocabulary. The extension
 * Other browsers? Probably more effort than it's worth considering Chrome popularity.
 
 * ~~Limit number of words translated per page (requested).~~
+
+* Update to Manifest v3.
