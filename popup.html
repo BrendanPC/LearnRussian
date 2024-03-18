@@ -1,10 +1,18 @@
 <!doctype html>
 <html>
   <head>
-		<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="common.js"></script>
     <script src="popup.js"></script>
   </head>
   <body>
+		<span class="rtiy__language" title="Select the target language."><b>Language</b>
+		<select name="language" id="language_select">
+			<option value="russian">Russian</option>
+			<option value="korean">Korean</option>
+			<option value="none">None</option>
+		</select>
+		</span><br>
 		<span class="rtiy__blacklist" title="Disable the extension for all pages of this domain." id="blacklist_button"><u>Disable Domain</u></span>
 		<span class="rtiy__blacklist" title="Re-enable the extension for all pages of this domain." id="whitelist_button"><u>Enable Extension</u></span>
 		<span class="rtiy__blacklist" title="Disable the extension temporarily for this page only." id="blackonce_button"><u>Disable Once</u></span>

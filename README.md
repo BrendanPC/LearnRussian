@@ -19,9 +19,9 @@ A simple Chrome extension to help me extend my Russian vocabulary. The extension
 
 * ~~Right-click to see translation, for quicker help than checking the dictionary.~~
 
-* Very easily altered to support other languages - simply edit dictionary.js.
+* ~~Very easily altered to support other languages - simply edit dictionary.js.~~
 
-* Click in dictionary to get more info, e.g. get a pronunciation audio clip, word conjugations, etc.
+* ~~Click in dictionary to get more info, e.g. get a pronunciation audio clip, word conjugations, etc.~~
 
 * Click in dictionary to highlight words on page / click on page to highlight in dictionary
 
@@ -32,3 +32,7 @@ A simple Chrome extension to help me extend my Russian vocabulary. The extension
 * ~~Limit number of words translated per page (requested).~~
 
 * Update to Manifest v3.
+
+## Bugs
+
+* Some websites seem to have some sort of race condition where the website will *sometimes* revert words after they've been changed.

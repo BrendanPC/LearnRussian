@@ -19,12 +19,6 @@ function setBlacklist(status, permanence) {
 	});
 }
 
-function setProperty(settingName, settingValue) {
-	var obj = {};
-	obj[settingName] = settingValue;
-	chrome.storage.sync.set(obj);
-}
-
 function setVisualSetting(settingName, settingValue) {
 	var settingButtons = document.getElementsByName(settingName);
 	for(var i=0;i<settingButtons.length;i++) {
@@ -32,10 +26,16 @@ function setVisualSetting(settingName, settingValue) {
 	}
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
+	var language_select = document.getElementById('language_select');
 	var black_button = document.getElementById('blacklist_button');
 	var white_button = document.getElementById('whitelist_button');
 	var blackonce_button = document.getElementById('blackonce_button');
+
+	language_select.addEventListener('change', function(event) {
+		setLanguage(event.target.value);
+	});
 	
 	black_button.addEventListener('click', function() {
 		setBlacklist(true, true);
@@ -96,3 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 });
 
+chrome.storage.sync.get(["language"]).then((result) => {
+	document.getElementById('language_select').value = result["language"];
+});

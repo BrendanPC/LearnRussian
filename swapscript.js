@@ -1,8 +1,13 @@
 ﻿var ACTIVE_DICTIONARY = {}; // contains words translated on current page
+var ACTIVE_LANGUAGE = false;
+var ACTIVE_REGEX = RUSSIAN_REGEX;
 var PAGE_BLACKLISTED = false;
 var DENSITY_LEVEL = 'high';
 var DIFFICULTY_LEVEL = 'hard';
 var SWAPPED_COUNT = 0;
+var EASY_DICTIONARY = [[]];
+var MEDIUM_DICTIONARY = [[]];
+var HARD_DICTIONARY = [[]];
 
 var RUSSIAN_WORD = ""; // a state var is used because the built-in string.replace only allows 2 arguments
 function maintainCaps(match, p1, p2, p3) {
@@ -10,6 +15,20 @@ function maintainCaps(match, p1, p2, p3) {
 	if(p2.toUpperCase() === p2) return p1 + RUSSIAN_WORD.toUpperCase() + p3;
 	if(p2.charAt(0) === p2.charAt(0).toUpperCase()) return p1 + RUSSIAN_WORD.charAt(0).toUpperCase() + RUSSIAN_WORD.slice(1) + p3;
 	return p1 + RUSSIAN_WORD + p3;
+}
+
+function beRussian() {
+	EASY_DICTIONARY = RUSSIAN_EASY_DICTIONARY;
+	MEDIUM_DICTIONARY = RUSSIAN_MEDIUM_DICTIONARY;
+	HARD_DICTIONARY = RUSSIAN_HARD_DICTIONARY;
+	ACTIVE_REGEX = RUSSIAN_REGEX;
+}
+
+function beKorean() {
+	EASY_DICTIONARY = KOR_EASY_DICTIONARY;
+	MEDIUM_DICTIONARY = KOR_MEDIUM_DICTIONARY;
+	HARD_DICTIONARY = KOR_HARD_DICTIONARY;
+	ACTIVE_REGEX = KOR_REGEX;
 }
 
 function replaceFromDictionary(text, dictionary) {
@@ -97,21 +116,48 @@ function findAndReplace() {
 }
 
 function getTranslations(text) {
-	var words = text.toLowerCase().split(/[^А-Яа-яЁё]/); // all Russian Cyrillic alphabet chars
+	var words = text.toLowerCase().split(ACTIVE_REGEX);
 	var seenWords = {} // hash table to avoid duplicates
 	var newText = "";
+	var gtText = "";
 	var hasWord = false;
 	for(var i=0;i<words.length;i++) {
 		if(seenWords.hasOwnProperty(words[i])) continue;
 		seenWords[words[i]] = true;
 		if(ACTIVE_DICTIONARY.hasOwnProperty(words[i])) {
-			if(hasWord) newText += "; ";
+			if(hasWord) {
+				newText += "; ";
+				gtText += ", ";
+			}
 			newText += ACTIVE_DICTIONARY[words[i]][1] + ": " + ACTIVE_DICTIONARY[words[i]][0];
+			gtText += ACTIVE_DICTIONARY[words[i]][1];
 			hasWord = true;
 		}
 	}
-	return hasWord ? newText : "Highlight text containing Russian words to see their translation.";
+	if(ACTIVE_LANGUAGE) {
+		setProperty("translateTarget", `https://translate.google.com/?sl=${ACTIVE_LANGUAGE.slice(0, 2).toLowerCase()}&tl=en&text=${gtText}&op=translate`);
+		return hasWord ? newText : `Highlight text containing ${ACTIVE_LANGUAGE} words to see their translation.`;
+	} else {
+		return "Leksika is currently disabled."
+	}
 }
+
+chrome.storage.sync.get(["language"]).then((result) => {
+	switch(result["language"]) {
+	case 'korean':
+		ACTIVE_LANGUAGE = "Korean";
+		beKorean();
+		break;
+	case 'russian':
+		ACTIVE_LANGUAGE = "Russian";
+		beRussian();
+		break;
+	case 'none':
+	default:
+		ACTIVE_LANGUAGE = false
+		break;
+	}
+});
 
 $().ready(checkSettingsThen(findAndReplace));
 

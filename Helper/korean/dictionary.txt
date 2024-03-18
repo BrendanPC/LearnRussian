@@ -1,0 +1,599 @@
+1	개	dog
+2	고양이	cat
+3	물고기	fish
+4	새	bird
+5	소	cow
+6	쥐	mouse
+7	말	horse
+8	날개	wing
+9	동물	animal
+10	기차	train
+11	비행기	airplane
+12	차	car
+13	트럭	truck
+14	자정거	bicycle
+15	버스	bus
+16	배	boat; pear; stomach
+17	선박	a commercial ship/vessel
+18	타이어	tire
+19	기름	oil; gasoline
+20	엔진	engine
+21	기차표	train ticket
+22	교통	transportation; traffic
+23	도시	city
+24	집	house
+25	길	street
+26	도로	road
+27	공항	airport
+28	기차역	train station
+29	다리	bridge; leg
+30	호텔	hotel
+31	식당	restaurant
+32	농장	farm
+33	재판소	courthouse (legal)
+34	학교	school
+35	사무실	office
+36	방	room
+37	마을	village, town
+38	대학교	university
+39	클럽	club
+40	술집	bar
+41	공원	park
+42	캠프	camp
+43	가게	store
+44	극장	theater
+45	도서관	library
+46	병원	hospital
+47	교회	church
+48	시장	market
+49	나라	country
+50	건물	building
+51	바닥	floor
+52	공간	space, room
+53	은행	bank
+54	위치	location
+55	모자	hat
+56	드레스	dress
+57	양복	suit
+58	치마	skirt
+59	티셔츠	t-shirt
+60	바지	pants
+61	신발	shoes
+62	주머니	pocket
+63	코트	coat
+64	얼룩	stain
+65	옷	clothes
+66	빨간색	red
+67	초록색	green
+68	파랑색	blue
+69	노랑색	yellow
+70	곤색	navy blue
+71	분홍색	pink
+72	갈색	brown
+73	오랜지색	orange
+74	검은색	black
+75	하얀색	white
+76	회색	gray
+77	색깔	color
+78	아들	son
+79	딸	daughter
+80	엄마	mom
+81	아빠	dad
+82	부모님	parents
+83	애기	baby
+84	남자	man
+85	여자	woman
+86	형	the older brother of a male
+87	누나	the older sister of a male
+88	오빠	the older brother of a female
+89	언니	the older sister of a female
+90	할아버지	grandfather
+91	할머니	grandmother
+92	남편	husband
+93	아내	wife
+94	왕	king
+95	여왕	queen
+96	대통령	president
+97	옆집 사람	neighbour
+98	여자아이	little girl
+99	남자아이	little boy
+100	성인	adult
+101	인간	human being
+102	친구	friend
+103	피해자	victim
+104	선수	player
+105	팬	fan
+106	군중	crowd
+107	사람	person
+108	선생님	teacher
+109	학생	student
+110	변호사	lawyer
+111	의사	doctor
+112	환자	patient
+113	웨이터	waiter
+114	비서	secretary
+115	신부님	priest
+116	경찰	police
+117	군대	army
+118	군인	soldier
+119	예술가	artist
+120	저자	author
+121	매니저	manager
+122	기자	reporter
+123	배우	actor
+124	직업	job
+125	종교	religion
+126	천국	heaven
+127	지옥	hell
+128	죽음	death
+129	약	medicine
+130	돈	money
+131	원	won (Korean currency)
+132	지폐	paper money (bill)
+133	결혼	marriage
+134	결혼식	wedding
+135	팀	team
+136	인종	ethnicity
+137	섹스	sex
+138	성별	gender
+139	살인	murder
+140	교도소	prison
+141	기술	technology
+142	정력	stamina, energy
+143	전쟁	war
+144	평화	peace
+145	공격	attack
+146	선거	election
+147	잡지	magazine
+148	신문	newspaper
+149	독	poison
+150	총	gun
+151	스포츠	sports
+152	경주	race
+153	운동	exercise, workout
+154	공	ball
+155	게임	game
+156	가격	price
+157	계약서	contract
+158	마약	drug
+159	간판	signboard
+160	과학	science
+161	하느님	god
+162	밴드	band
+163	노래	song
+164	악기	musical instrument
+165	음악	music
+166	영화	movie
+167	미술	art
+168	커피	coffee
+169	차	tea
+170	맥주	beer
+171	쥬스	juice
+172	물	water
+173	우유	milk
+174	음료수	beverage
+175	계란	egg
+176	치즈	cheese
+177	국물	soup, broth
+178	케이크	cake
+179	닭	chicken
+180	돼지고기	pork
+181	소고기	beef
+182	사과	apple
+183	바나나	banana
+184	오렌지	orange
+185	레몬	lemon
+186	옥수수	corn
+187	쌀	uncooked rice
+188	밥	rice; meal
+189	식용유	cooking oil
+190	씨	seed
+191	칼	knife
+192	숟가락	spoon
+193	포크	fork
+194	접시	plate
+195	컵	cup
+196	아침	morning; breakfast
+197	점심	lunch
+198	저녁	dinner; evening
+199	설탕	sugar
+200	소금	salt
+201	병	bottle
+202	음식	food
+203	책상	desk
+204	탁자	coffee table
+205	식탁	dining table
+206	의자	chair
+207	침대	bed
+208	꿈	dream
+209	창문	window
+210	문	door
+211	침실	bedroom
+212	부엌	kitchen
+213	화장실	bathroom
+214	연필	pencil
+215	볼팬	pen
+216	사진	photo
+217	비누	soap
+218	책	book
+219	페이지	page
+220	열쇠	key
+221	페인트	paint
+222	편지	letter
+223	메모	note
+224	벽	wall
+225	종이	paper
+226	천장	ceiling
+227	지붕	roof
+228	수영장	swimming pool
+229	자물쇠	lock
+230	전화기	phone
+231	정원	garden
+232	마당	yard
+233	바늘	needle
+234	가방	bag
+235	상자	box
+236	선물	gift, present
+237	카드	card
+238	반지	ring
+239	도구	tool
+240	시계	clock, watch
+241	램프	lamp
+242	휴대폰	cell phone
+243	네트워크	network
+244	컴퓨터	computer
+245	노트북	laptop
+246	화면	screen
+247	카메라	camera
+248	텔레비전	television
+249	라디오	radio
+250	머리	head
+251	목	neck
+252	얼굴	face
+253	턱수염	beard
+254	머리카락	hair
+255	눈	eye
+256	입	mouth
+257	입술	lips
+258	코	nose
+259	이빨	tooth
+260	귀	ear
+261	눈물	tears
+262	혀	tongue
+263	등	back
+264	허리	waist, lower back
+265	발가락	toe
+266	손가락	finger
+267	발	foot
+268	손	hand
+269	팔	arm
+270	어깨	shoulder
+271	심장	heart
+272	피	blood
+273	뇌	brain
+274	무릅	knee
+275	땀	sweat
+276	병	disease; illness
+277	뼈	bone
+278	목소리	voice
+279	피부	skin
+280	몸	body
+281	바다	sea, ocean
+282	강	river
+283	산	mountain
+284	비	rain
+285	눈	snow; eye
+286	달	moon; month
+287	세계	world
+288	지구	earth
+289	숲	forest
+290	하늘	sky
+291	식물	plant
+292	바람	wind
+293	토양	soil
+294	꽃	flower
+295	계곡	valley
+296	뿌리	root
+297	호수	lake
+298	별	star
+299	잔디	grass
+300	나뭇잎	leaf
+301	공기	air
+302	모래	sand
+303	해변	beach
+304	파도	wave
+305	불	fire
+306	어름	ice
+307	섬	island
+308	언덕	hill
+309	열	fever; heat
+310	자연	nature
+311	유리	glass
+312	금속	metal
+313	플라스틱	plastic
+314	나무	tree, wood
+315	돌	stone, pebble
+316	다이아몬드	diamond
+317	찰흙	clay
+318	먼지	dust, dirt
+319	금	gold
+320	구리	copper
+321	은	silver
+322	재료	ingredient, material
+323	미터	meter
+324	센티미터	centimeter
+325	킬로미터	kilometer
+326	반	half
+327	서클	circle
+328	정사각형	square
+329	온도	temperature
+330	날짜	date
+331	무게	weight
+332	가장자리	edge
+333	지도	map
+334	점	point
+335	자음	consonant
+336	모음	vowel
+337	가벼운	light (weight)
+338	소리	sound
+339	네	yes, I see, okay (formal)
+340	아니요	No (formal)
+341	조각	piece
+342	아픔	pain
+343	상처	wound
+344	구멍	hole
+345	이미지	image
+346	패턴	pattern
+347	명사	noun
+348	동사	verb
+349	형용사	adjective
+350	위에	above
+351	아래	under
+352	옆면	side of
+353	뒷면	back side
+354	안에	inside
+355	밖에	outside
+356	왼쪽	left side
+357	오른쪽	right side
+358	곧장	straight
+359	북쪽	north
+360	남쪽	south
+361	동쪽	east
+362	서쪽	west
+363	방향	direction
+364	여름	summer
+365	봄	spring
+366	겨울	winter
+367	가을	autumn
+368	계절	season
+369	공	zero; ball
+370	하나	1
+371	둘	2
+372	셋	3
+373	넷	4
+374	다섯	5
+375	여섯	6
+376	일곱	7
+377	여덟	8
+378	아홉	9
+379	열	10
+380	열하나	11
+381	열둘	12
+382	열셋	13
+383	열넷	14
+384	열다섯	15
+385	열여섯	16
+386	열일곱	17
+387	열여덜	18
+388	열아홉	19
+389	스물	20
+390	스물한	21
+391	스물두	22
+392	서른	30
+393	서른하나	31
+394	서른둘	32
+395	마흔	40
+396	마흔하나	41
+397	마흔둘	42
+398	쉰	50
+399	쉰하나	51
+400	쉰둘	52
+401	예순	60
+402	예순하나	61
+403	예순둘	62
+404	여든	80
+405	여든하나	81
+406	여든둘	82
+407	아흔	90
+408	아흔하나	91
+409	아흔둘	92
+410	백	100
+411	백하나	101
+412	백둘	102
+413	백십	110
+414	백십일	111
+415	천	1000
+416	천일	1001
+417	만	10,000
+418	십만	100,000
+419	백만	1,000,000
+420	천만	10,000,000
+421	억	100,000,000
+422	십억	1,000,000,000
+423	첫번째	first
+424	둘째	second
+425	세번째	third
+426	네번째	fourth
+427	다섯번째	fifth
+428	번호	number
+429	일월	January
+430	이월	February
+431	삼월	March
+432	사월	April
+433	오월	May
+434	유월	June
+435	칠월	July
+436	팔월	August
+437	구월	September
+438	시월	October
+439	십일월	November
+440	십이월	December
+441	월요일	Monday
+442	화요일	Tuesday
+443	수요일	Wednesday
+444	목요일	Thursday
+445	금요일	Friday
+446	토요일	Saturday
+447	일요일	Sunday
+448	년	year (counter)
+449	달	month (counter)
+450	시간	hour (duration); time
+451	분	minute; person (honorific)
+452	밤	night
+453	일하다	to work
+454	놀다	to play
+455	걷다	to walk
+456	뛰다	to run
+457	운전하다	to drive
+458	날다	to fly
+459	수영하다	to swim
+460	가다	to go
+461	멈추다	to stop
+462	따르다	to follow
+463	생각하다	to think
+464	말하다	to speak
+465	먹다	to eat
+466	마시다	to drink
+467	죽이다	to kill
+468	죽다	to die
+469	웃다	to laugh, smile
+470	울다	to cry
+471	사다	to buy
+472	지불하다	to pay
+473	팔다	to sell
+474	쏘다	to shoot
+475	배우다	to learn
+476	점프하다	to jump
+477	냄새를 맡다	to smell something
+478	듣다	to listen, hear
+479	맛보다	to taste
+480	보다	to see
+481	만지다	to touch
+482	뽀뽀하다	to kiss
+483	불타다	to burn
+484	녹다	to melt
+485	파다	to dig
+486	폭발하다	to explode
+487	앉다	to sit
+488	서다	to stand
+489	사랑하다	to love
+490	지나가다	to pass by
+491	자르다	to cut (hair/trees/papers...)
+492	싸우다	to fight
+493	눕다	to lie down
+494	춤추다	to dance
+495	자다	to sleep
+496	깨다	to wake up
+497	노래하다	to sing
+498	세다	to count
+499	결혼하다	to marry
+500	기도하다	to pray
+501	이기다	to win
+502	지다	to lose
+503	섞다	to mix
+504	구부리다	to bend
+505	씻다	to wash
+506	요리하다	to cook
+507	열다	to open
+508	닫다	to close
+509	쓰다	to write
+510	부르다	to call
+511	돌다	to turn
+512	건설하다	To construct or erect
+513	가르치다	to teach
+514	자라다	to grow up
+515	그리다	to draw
+516	먹이다	to feed
+517	잡다	to catch
+518	던지다	to throw
+519	청소하다	to clean
+520	찾다	to find, look for
+521	넘어지다	to fall down
+522	밀다	to push
+523	당기다	pull
+524	들다	to cost; carry
+525	망가지다	to break down
+526	깨지다	to break
+527	입다	to wear
+528	흔들다	to shake
+529	서명하다	to sign (signature)
+530	패다	To beat, to bash
+531	들어올리다	to lift
+532	길다	to be long
+533	짧다	to be short
+534	키가 크다	to be tall (height)
+535	키가 작다	to be short (short)
+536	넓다	to be wide
+537	크다	to be big
+538	작다	to be small
+539	느리다	to be slow
+540	빠르다	to be fast
+541	뜨겁다	to be hot
+542	차겁다	to be cold
+543	따뜻하다	to be warm
+544	선선하다	to be cool
+545	새롭다	to be new
+546	오래되다	to be old (for inanimate objects)
+547	젊다	To be young,youthful
+548	늙다	to be old (person)
+549	좋다	to be good
+550	나쁘다	to be bad
+551	젖다	to be wet, damp
+552	건조하다	to be dry
+553	아프다	to be sick, hurt
+554	건강하다	to be healthy
+555	시끄럽다	to be noisy, loud
+556	조용하다	to be quiet
+557	행복하다	to be happy
+558	슬프다	to be sad
+559	아름답다	to be beautiful
+560	못생기다	to be ugly
+561	귀머거리	deaf person
+562	맹인	blind person
+563	착하다	to be nice, kind
+564	가난하다	to be poor
+565	부유하다	to be wealthy
+566	두껍다	to be thick
+567	얇다	to be thin
+568	비싸다	to be expensive
+569	싸다	to be cheap
+570	평탄하다	to be smooth, flat
+571	구부러지다	to be bent
+572	끼다	To put on or wear, to wear (a ring)
+573	헐렁하다	to be loose, baggy
+574	놉다	to be high
+575	낮다	to be low
+576	딱딱하다	to be hard
+577	부드럽다	to be soft
+578	깊다	to be deep
+579	얕다	to be shallow
+580	깨끗하다	to be clean
+581	더럽다	to be dirty
+582	힘이 세다	to be strong
+583	약하다	to be weak
+584	살다	to live
+585	무겁다	to be heavy
+586	가볍다	to be light
+587	어둡다	to be dark
+588	밝다	to be bright
+589	인기가 많다	to be popular
+590	저	I, me (formal); that
+591	나	I, me (informal)
+592	그	that, he, she, it
+593	우리	we, our
+594	상대방	Other party, counterpart
+595	저의	my (formal)
+596	내	my (informal)
+597	당신	you (formal)
+598	내가	I (as subject)
+599	네가	you

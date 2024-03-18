@@ -2,12 +2,12 @@
   "manifest_version": 3,
 
   "name": "ЛЕКСИКА! - Russian Vocabulary Tool",
-	"short_name": "ЛЕКСИКА!",
+	"short_name": "LEKSIKA!",
   "description": "This extension replaces certain English nouns on a webpage with their Russian equivalents.",
   "version": "2.0.0",
   "action": {
     "default_icon": {
-      "16": "16icon.png"
+      "16": "icon.png"
     },
     "default_title": "ЛЕКСИКА!",
     "default_popup": "popup.html"
@@ -24,10 +24,10 @@
   "content_scripts": [
     {
 	  "matches": ["<all_urls>"],
-      "js": ["jquery-3.7.1.min.js", "dictionary.js", "swapscript.js"]
+      "js": ["jquery-3.7.1.min.js", "common.js", "dictionaries/russian.js", "dictionaries/korean.js", "swapscript.js"]
     }],
-	"icons": { "16": "16icon.png",
-		"48": "48icon.png",
-		"128": "128icon.png"
+	"icons": { "16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
 	}
 }

@@ -1,4 +1,5 @@
-var EASY_DICTIONARY = [["mind","ум","masculine"],
+var RUSSIAN_REGEX = new RegExp(/[^А-Яа-яЁё]/gi);
+var RUSSIAN_EASY_DICTIONARY = [["mind","ум","masculine"],
 ["brains","ум","masculine"],
 ["intellect","ум","masculine"],
 ["year","год","masculine"],
@@ -423,7 +424,7 @@ var EASY_DICTIONARY = [["mind","ум","masculine"],
 ["beast","зверь","masculine"]];
 
 
-var MEDIUM_DICTIONARY = [["head","голова","feminine"],
+var RUSSIAN_MEDIUM_DICTIONARY = [["head","голова","feminine"],
 ["mind","голова","feminine"],
 ["brains","голова","feminine"],
 ["work","работа","feminine"],
@@ -686,7 +687,7 @@ var MEDIUM_DICTIONARY = [["head","голова","feminine"],
 ["America","Америка","feminine"],
 ["United States","Америка","feminine"]];
 
-var HARD_DICTIONARY = [["talk","разговор","masculine"],
+var RUSSIAN_HARD_DICTIONARY = [["talk","разговор","masculine"],
 ["conversation","разговор","masculine"],
 ["flat","квартира","feminine"],
 ["apartment","квартира","feminine"],
