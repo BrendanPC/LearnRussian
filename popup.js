@@ -26,7 +26,6 @@ function setVisualSetting(settingName, settingValue) {
 	}
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
 	var language_select = document.getElementById('language_select');
 	var black_button = document.getElementById('blacklist_button');
@@ -48,16 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	blackonce_button.addEventListener('click', function() {
 		setBlacklist(true, false);
 	});
-	
-	
-	
-	var densitySettings = document.getElementsByName('density');
+
+	var densitySlider = document.getElementsByName('density')[0];
 	var difficultySettings = document.getElementsByName('difficulty');
 	document.getElementById('rtiy__settings').addEventListener('change', function() {
-		var density;
-    for(var i=0;i<densitySettings.length;i++) {
-			if(densitySettings[i].checked) density = densitySettings[i].value;
-		}
+    	// for(var i=0;i<densitySettings.length;i++) {
+		// 	if(densitySettings[i].checked) density = densitySettings[i].value;
+		// }
+		var density = densitySlider.value;
 		var difficulty;
 		for(var i=0;i<difficultySettings.length;i++) {
 			if(difficultySettings[i].checked) difficulty = difficultySettings[i].value;
@@ -90,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					row.insertCell(2).innerHTML = dict[keys[i]][2];
 				}
 			}
-			setVisualSetting('density', response.density);
+			document.getElementsByName('density')[0].value = response.density;
 			setVisualSetting('difficulty', response.difficulty);
 		});
 	});

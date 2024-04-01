@@ -9,3 +9,7 @@ function setLanguage(language) {
 	chrome.tabs.reload();
 	window.close();
 }
+
+function debug(msg) {
+	console.log("LEXIKA: " + msg);
+}

@@ -2,9 +2,10 @@
 var ACTIVE_LANGUAGE = false;
 var ACTIVE_REGEX = RUSSIAN_REGEX;
 var PAGE_BLACKLISTED = false;
-var DENSITY_LEVEL = 'high';
+var DENSITY_LEVEL = '100';
 var DIFFICULTY_LEVEL = 'hard';
 var SWAPPED_COUNT = 0;
+var SKIPPED_COUNT = 0;
 var EASY_DICTIONARY = [[]];
 var MEDIUM_DICTIONARY = [[]];
 var HARD_DICTIONARY = [[]];
@@ -32,8 +33,11 @@ function beKorean() {
 }
 
 function replaceFromDictionary(text, dictionary) {
-	var madeChanges = false;
 	for(var i=0;i<dictionary.length;i++) {
+		if(Math.random() * 100 > DENSITY_LEVEL) {
+			SKIPPED_COUNT++;
+			continue;
+		}
 		var re = new RegExp("(\\s|^)(" + dictionary[i][0] + ")(\\W|$)", "gi");
 		if(text.search(re) !== -1) {
 			RUSSIAN_WORD = dictionary[i][1];
@@ -46,9 +50,6 @@ function replaceFromDictionary(text, dictionary) {
 			} else {
 				ACTIVE_DICTIONARY[dictionary[i][1]] = dictionary[i].slice(); // .slice() to make a shallow copy, copied reference = bad
 			}
-			if(DENSITY_LEVEL === 'low') return text;
-			if(madeChanges && DENSITY_LEVEL === 'medium') return text;
-			madeChanges = true;
 		}
 	}
 	return text;
@@ -82,6 +83,8 @@ function checkSettingsThen(callback) {
 		}
 		if(null != results['density']) DENSITY_LEVEL = results['density'];
 		if(null != results['difficulty']) DIFFICULTY_LEVEL = results['difficulty'];
+		debug("Density: " + DENSITY_LEVEL);
+		debug("Difficulty: " + DIFFICULTY_LEVEL);
 		
 		callback(results);
 	});
@@ -112,7 +115,8 @@ function findAndReplace() {
 			}
 		}
 	}
-	console.log("ЛЕКСИКА DEBUG: runtime " + (Date.now() - startTime)/1000 + " seconds. Swapped " + SWAPPED_COUNT + " words.");
+	console.log(`ЛЕКСИКА DEBUG: runtime ${(Date.now() - startTime)/1000} seconds. Swapped ${SWAPPED_COUNT} words.`);
+	debug(`Skipped info: ${SKIPPED_COUNT}`);
 }
 
 function getTranslations(text) {
@@ -144,15 +148,15 @@ function getTranslations(text) {
 
 chrome.storage.sync.get(["language"]).then((result) => {
 	switch(result["language"]) {
-	case 'korean':
+	case 'Korean':
 		ACTIVE_LANGUAGE = "Korean";
 		beKorean();
 		break;
-	case 'russian':
+	case 'Russian':
 		ACTIVE_LANGUAGE = "Russian";
 		beRussian();
 		break;
-	case 'none':
+	case 'None':
 	default:
 		ACTIVE_LANGUAGE = false
 		break;
