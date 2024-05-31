@@ -76,7 +76,7 @@ function checkSettingsThen(callback) {
 	var url = window.location.hostname;
 	chrome.storage.sync.get([url, 'density', 'difficulty'], function(results) {
 		if(null != results[url]) {
-			PAGE_BLACKLISTED = results[url].blacklist;
+			PAGE_BLACKLISTED = PAGE_BLACKLISTED || results[url].blacklist;
 			if(!results[url].permanent) {
 				chrome.storage.sync.remove(url);
 			}
@@ -88,6 +88,19 @@ function checkSettingsThen(callback) {
 		
 		callback(results);
 	});
+}
+
+function checkTimerThen(callback) {
+	chrome.storage.sync.get(['pausedAt']).then(checkTimer)
+}
+
+function checkTimer(result) {
+	var ts = result['pausedAt'];
+	if(Date.now() - ts > 900000) {
+		chrome.storage.sync.remove('pausedAt');
+	} else {
+		PAGE_BLACKLISTED = true;
+	}
 }
 
 function findAndReplace() {
@@ -152,18 +165,19 @@ chrome.storage.sync.get(["language"]).then((result) => {
 		ACTIVE_LANGUAGE = "Korean";
 		beKorean();
 		break;
+	default:
+		setProperty("language", "Russian");
 	case 'Russian':
 		ACTIVE_LANGUAGE = "Russian";
 		beRussian();
 		break;
 	case 'None':
-	default:
 		ACTIVE_LANGUAGE = false
 		break;
 	}
 });
 
-$().ready(checkSettingsThen(findAndReplace));
+$().ready(checkTimerThen(checkSettingsThen(findAndReplace)));
 
 document.addEventListener("mouseup", function(ev) {
 	chrome.runtime.sendMessage({request: "updateContext", newText: getTranslations(window.getSelection().toString())});

@@ -17,7 +17,6 @@ chrome.runtime.onInstalled.addListener(async () => {
     contexts: ["selection", "page"],
   });
   setProperty("translate.google.com", {blacklist: true, permanent: true});
-  setProperty("language", "Russian");
 });
 
 chrome.runtime.onMessage.addListener(
